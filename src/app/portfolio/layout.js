@@ -13,5 +13,9 @@ export const metadata = {
 };
 
 export default function PortfolioLayout({ children }) {
-  return <div className={`${inter.className} min-h-full`}>{children}</div>;
+  return (
+    <div className={`portfolio-root ${inter.className} min-h-full`}>
+      {children}
+    </div>
+  );
 }

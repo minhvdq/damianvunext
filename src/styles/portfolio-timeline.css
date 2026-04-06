@@ -281,15 +281,15 @@ footer {
 }
 
 
-/* RESPONSIVE DESIGN */
+/* RESPONSIVE DESIGN — .portfolio-root raises specificity vs leaked main-site.css */
 @media (max-width: 992px) {
-    .portfolio-container {
+    .portfolio-root .portfolio-container {
         flex-direction: column;
     }
-    #timeline-nav {
+    .portfolio-root #timeline-nav {
         flex-basis: auto;
     }
-    .timeline-nav-inner {
+    .portfolio-root .timeline-nav-inner {
         position: static;
         margin-bottom: 2rem;
     }
@@ -348,4 +348,34 @@ footer {
 
 #back-to-top-arrow:hover {
   opacity: 1;
+}
+
+/* ------------------------------------------------------------------
+   After client navigation from /, main-site.css stays in the document.
+   Its global `section`, `#contact`, and `footer` rules would otherwise
+   break this page (timeline margins/height, vertical social icons).
+   These scoped overrides win over the leaked globals.
+   ------------------------------------------------------------------ */
+.portfolio-root section.timeline-item {
+  height: auto;
+  min-height: unset;
+  padding-top: 0;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+}
+
+.portfolio-root #contact {
+  margin-top: 0;
+  height: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.portfolio-root footer {
+  height: auto;
+  margin-left: 0;
+  margin-right: 0;
 }
