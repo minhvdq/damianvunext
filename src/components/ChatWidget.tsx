@@ -106,12 +106,14 @@ export default function ChatWidget() {
   return (
     <div
       data-chat-widget-root
-      className="fixed bottom-6 right-6 z-[1001] box-border flex items-end justify-end font-sans pointer-events-none [&_*]:box-border"
+      className="pointer-events-none fixed inset-x-0 bottom-0 z-[1001] box-border flex max-w-[100vw] flex-col items-stretch gap-3 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom,0px))] pl-[max(0.75rem,env(safe-area-inset-left,0px))] pr-[max(0.75rem,env(safe-area-inset-right,0px))] font-sans sm:inset-x-auto sm:bottom-6 sm:right-6 sm:left-auto sm:w-auto sm:flex-row sm:items-end sm:gap-0 sm:p-0 sm:pb-0 sm:pl-0 sm:pr-0 [&_*]:box-border"
     >
-      {/* Chat Panel - Positioned to the LEFT of the button */}
+      {/* Panel: full-width above FAB on small screens; to the left of FAB on sm+ */}
       <div
-        className={`pointer-events-auto absolute bottom-0 right-[72px] box-border flex w-[360px] flex-col overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-black/5 transition-all duration-300 ease-in-out origin-bottom-right ${
-          open ? "scale-100 opacity-100 h-[540px]" : "scale-50 opacity-0 h-0"
+        className={`pointer-events-auto box-border flex w-full min-w-0 max-w-full flex-col overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-black/5 transition-all duration-300 ease-in-out origin-bottom sm:absolute sm:bottom-0 sm:right-[4.5rem] sm:w-[360px] sm:max-w-[min(360px,calc(100vw-1.5rem-4.5rem-0.75rem))] sm:origin-bottom-right ${
+          open
+            ? "max-h-[min(32rem,calc(100dvh-7.5rem-env(safe-area-inset-bottom,0px)))] h-[min(32rem,calc(100dvh-7.5rem-env(safe-area-inset-bottom,0px)))] scale-100 opacity-100 sm:h-[min(540px,calc(100dvh-2rem-env(safe-area-inset-bottom,0px)-env(safe-area-inset-top,0px)))] sm:max-h-[min(540px,calc(100dvh-2rem-env(safe-area-inset-bottom,0px)-env(safe-area-inset-top,0px)))]"
+            : "h-0 max-h-0 scale-50 opacity-0 sm:max-h-0"
         }`}
       >
         <header className="flex min-w-0 shrink-0 items-center justify-between !gap-3 border-b border-black/[0.05] bg-white !px-4 !py-3 shadow-sm z-10">
@@ -245,11 +247,10 @@ export default function ChatWidget() {
         </form>
       </div>
 
-      {/* Floating Action Button (FAB) */}
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className="pointer-events-auto relative z-20 flex shrink-0 cursor-pointer items-center justify-center rounded-full border-none bg-transparent p-0 outline-none transition-transform hover:scale-105 focus:outline-none active:scale-95"
+        className="pointer-events-auto relative z-20 ml-auto flex shrink-0 cursor-pointer items-center justify-center rounded-full border-none bg-transparent p-0 outline-none transition-transform hover:scale-105 focus:outline-none active:scale-95 sm:ml-0"
         aria-expanded={open}
         aria-label={open ? "Close chat" : "Open chat"}
       >
