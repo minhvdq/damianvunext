@@ -1,0 +1,82 @@
+{
+    "personal_info": {
+      "full_name": "Dinh Quang Minh Vu (preferred first name: Damian)",
+      "current_title": "Undergraduate Student Researcher, Full-Stack Developer, and Software Engineer Intern",
+      "location": "Gettysburg, PA (Open to Relocate and Remote)",
+      "short_bio": "Passionate about technology and math, I'm a junior student at Gettysburg College pursuing a Bachelor's in Computer Science and Math. I'm currently an undergraduate researcher assistant and a full-stack developer. I love using logical thinking to solve practical problems. That is why I love pure math and Algorithms a lot."
+    },
+    "contact_and_links": {
+      "email": "vuminh300805@gmail.com",
+      "github": "https://www.github.com/minhvdq",
+      "linkedin": "https://www.linkedin.com/in/minh-vu-a0617225a/",
+      "portfolio_url": "https://www.damianovu.com/"
+    },
+    "technical_skills": {
+      "Languages": "JavaScript, TypeScript, Python, Java, Go, SQL, C++, HTML/CSS",
+      "Frameworks": "React.js, Node.js, Express.js, Vue.js, SpringBoot, Docker, Kubernetes, Flask, Django",
+      "Tools": "ZooKeeper, Kafka, RabbitMQ, Git, AWS, Amazon ElastiCache, Prometheus, Grafana, Postman, Figma, Vercel",
+      "Database": "MongoDB, PostgreSQL, MySQL, Redis, Firebase",
+      "ML/AI": "PyTorch, TensorFlow, Hugging Face Transformers, Keras, FinBERT, OpenAI API, scikit-learn, NumPy"
+    },
+    "work_experience": [
+      {
+        "company": "CMC Global",
+        "role": "Software Engineer Intern",
+        "duration": "Nov 2025 - Jan 2026",
+        "key_achievements": "Engineered 7 microservice APIs for Payment Authorization and Courier Dispatch using Java SpringBoot, decoupling workflows into scalable services. Implemented Apache Kafka and the SAGA pattern to ensure data consistency. Developed a Vue.js dashboard with PostgreSQL and the Outbox pattern to synchronize real-time order updates."
+      },
+      {
+        "company": "Gettysburg College",
+        "role": "Full-stack Developer",
+        "duration": "Jun 2025 - Jul 2025",
+        "key_achievements": "Developed and deployed a full-stack event management web app using React.js, Express.js, and AWS EC2 to handle scheduling and resource allocation. Managed 200+ student-event registrations using MySQL junction tables. Reduced event query response times by 80% by implementing an Amazon ElastiCache/Redis layer."
+      },
+      {
+        "company": "VinAI",
+        "role": "Software Engineer Intern",
+        "duration": "Jun 2024 - Aug 2024",
+        "key_achievements": "Engineered a scalable distributed system for synchronized AI security camera clusters, enabling real-time object recognition. Architected a leader election system using Apache ZooKeeper, ensuring 99.8% uptime with automated failover. Achieved 6% acceleration in object recognition processing by optimizing MongoDB schemas."
+      },
+      {
+        "company": "Gettysburg College",
+        "role": "Undergraduate Student Researcher",
+        "duration": "May 2024 - Jul 2025",
+        "key_achievements": "Co-authored 'Optimal Play of the All Yellow Zombie Dice Game', published in Springer Nature (CG 2024). Engineered a Python simulation library using NumPy to numerically solve scalar differential delay equations. Derived exact analytical solutions for complex delay differential equations."
+      },
+      {
+        "company": "Gettysburg College",
+        "role": "Peer Learning Assistant",
+        "duration": "Jan 2025 - Present",
+        "key_achievements": "Facilitated instructional support for Calculus II, Linear Algebra, and Object-Oriented Programming. Guided 60+ students through the implementation of core OOP principles and Java-based software development."
+      }
+    ],
+    "featured_projects": [
+      {
+        "project_name": "AlphaGen",
+        "description": "Architected an algorithmic trading microservices ecosystem processing 1000+ daily data points. Engineered dual predictive data pipelines, achieving 92% sentiment classification accuracy via FinBERT and 85% volatility forecasting via TensorFlow LSTM. Trained a PyTorch DQN reinforcement learning agent that outperformed baseline strategies by 14%.",
+        "tech_stack_used": "Python, PyTorch, TensorFlow, Keras, Hugging Face, FinBERT, OpenAI",
+        "link": "https://github.com/minhvdq"
+      },
+      {
+        "project_name": "GoScale Mail",
+        "description": "Built a distributed, multi-microservice chat application in Go supporting large-scale marketing campaigns. Developed an Auth service with PostgreSQL/OAuth2.0 and integrated RabbitMQ to orchestrate asynchronous requests. Containerized and deployed services with Docker.",
+        "tech_stack_used": "Go, Docker, Kubernetes, gRPC, Postgres, MongoDB, RabbitMQ, HTML, CSS",
+        "link": "https://github.com/minhvdq"
+      }
+    ],
+    "education": {
+      "degree": "Bachelor of Science in Computer Science and Mathematics",
+      "institution": "Gettysburg College",
+      "graduation_year": "Dec 2026",
+      "achievements": "Bronze Medal ICPC Mid-Atlantic Regional Contest 2024 at PSU-Harrisburg site"
+    },
+    "current_status_and_goals": {
+      "availability": "Looking for Software Engineer Internships for the Summer 2026, and a Full-time role after graduation in December 2026. I am also open to freelance projects and collaborating on research projects that align with my interests: Chaos Discrete Dynamical Systems, Abstract Algebra and Number Theory, Distributed Systems, and ML.",
+      "ideal_role": "Software Engineer, MLE, and Research Assistant",
+      "interests_and_hobbies": "I love playing video games, singing with my guitar, drawing sometimes, going to the gym, and doing martial arts."
+    },
+    "chatbot_instructions": {
+      "tone_of_voice": "Friendly, professional, concise, and slightly enthusiastic.",
+      "strict_rule": "If the user asks a question that cannot be answered using this JSON data, tell them you do not know and politely direct them to email me."
+    }
+  }

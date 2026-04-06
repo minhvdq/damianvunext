@@ -1,0 +1,351 @@
+/* GENERAL STYLES & RESET — matches minhvdq/DamianPortfolio portfolio/style.css;
+   body font-family is applied via next/font (Inter) on the portfolio layout wrapper. */
+:root {
+    --background-color: #ffffff;
+    --text-color: #1a1a1a;
+    --primary-color: #000000;
+    --secondary-color: #555555;
+    --border-color: #e0e0e0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+/* HEADER — scoped to portfolio hero only (avoid clobbering <header> in e.g. ChatWidget) */
+header#top {
+    padding: 8vh 5vw;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 5vh;
+}
+
+.main-title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    max-width: 60ch;
+    margin: 0 auto;
+}
+
+/* PORTFOLIO LAYOUT */
+.portfolio-container {
+    display: flex;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5vw;
+}
+
+/* STICKY TIMELINE NAVIGATION (LEFT COLUMN) */
+#timeline-nav {
+    flex: 0 0 250px; /* Do not grow, do not shrink, base width 250px */
+}
+
+.timeline-nav-inner {
+    position: sticky;
+    top: 40px;
+}
+
+#timeline-nav h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+#timeline-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#timeline-nav li a {
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    color: var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+#timeline-nav li a:hover {
+    background-color: #f5f5f5;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+#timeline-nav li a.active {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    font-weight: 700;
+}
+
+/* PROJECTS CONTENT (RIGHT COLUMN) */
+#projects-content {
+    flex-grow: 1;
+    position: relative;
+    padding-left: 40px; /* Space for the timeline line */
+}
+
+/* The timeline vertical line */
+#projects-content::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--border-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 8vh;
+}
+
+/* The dot on the timeline line */
+.timeline-dot {
+    position: absolute;
+    left: -48px; /* (40px padding + half of dot width) */
+    top: 12px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--background-color);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+    background-color: var(--primary-color);
+}
+
+.project-card {
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--background-color);
+    /* Fix for text overflow */
+    overflow-wrap: break-word;
+}
+
+.project-card h2 {
+    margin-top: 0;
+}
+
+.project-card ul {
+    padding-left: 20px;
+}
+
+.project-card li {
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+.project-card b {
+    color: var(--text-color);
+}
+
+/* IMAGE WRAPPER */
+.image-wrapper {
+    display: flex;
+    gap: 15px;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.image-wrapper img {
+    /* Fix for image overflow */
+    flex: 1 1 200px;
+    max-width: 100%;
+    min-width: 0;
+
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.image-wrapper img:hover {
+    opacity: 0.85;
+}
+
+/* FOOTER */
+footer {
+    padding: 5vh 5vw;
+    margin-top: 10vh;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    color: var(--secondary-color);
+}
+
+#contact {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.icon {
+    height: 1.5rem;
+    transition: transform 0.3s ease;
+}
+.icon:hover {
+    transform: scale(1.1);
+}
+
+/* MODAL STYLES */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+    animation: zoom 0.6s;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+@keyframes zoom {
+    from { transform: scale(0.1) }
+    to { transform: scale(1) }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+    .portfolio-container {
+        flex-direction: column;
+    }
+    #timeline-nav {
+        flex-basis: auto;
+    }
+    .timeline-nav-inner {
+        position: static;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    #projects-content {
+        padding-left: 20px;
+    }
+    .timeline-dot {
+        left: -29px; /* Adjust for smaller padding */
+        width: 14px;
+        height: 14px;
+        top: 8px;
+    }
+    .project-card h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* BUTTON STYLE */
+.btn-home {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 10px 25px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-home:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    text-decoration: none;
+}
+
+/* BACK-TO-TOP ARROW — centered above ChatWidget FAB (bottom-6/right-6, h-14 = 3.5rem) */
+#back-to-top-arrow {
+  position: fixed;
+  bottom: calc(1.5rem + 3.5rem + 0.625rem + env(safe-area-inset-bottom, 0px));
+  right: calc(1.5rem + (3rem - 40px) / 2);
+  width: 40px;
+  height: 40px;
+  z-index: 99;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+#back-to-top-arrow:hover {
+  opacity: 1;
+}
