@@ -25,16 +25,10 @@ const PROJECTS = [
         <li>
           <b>Where:</b>{" "}
           <a
-            href="https://github.com/minhvdq/CSCI435-Rice-Leaf-Disease-Classification/tree/damian"
+            href="https://quarantio.app/"
             target="_blank"
           >
-            GitHub
-          </a>,
-          <a
-            href="https://github.com/minhvdq/CSCI435-Rice-Leaf-Disease-Classification/tree/damian"
-            target="_blank"
-          >
-            Live
+            quarantio.app
           </a>
           .
         </li>
