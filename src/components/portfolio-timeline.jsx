@@ -13,6 +13,45 @@ const TRANSPARENT_PIXEL_GIF =
 
 const PROJECTS = [
   {
+    id: "quarantio",
+    navLabel: "Quarantio",
+    title: "Quarantio",
+    images: [
+      { src: ASSET("quarantio-1.png"), alt: "Quarantio Landing Page" },
+      { src: ASSET("quarantio-2.png"), alt: "Quarantio Dashboard" },
+    ],
+    children: (
+      <ul>
+        <li>
+          <b>Where:</b>{" "}
+          <a
+            href="https://github.com/minhvdq/CSCI435-Rice-Leaf-Disease-Classification/tree/damian"
+            target="_blank"
+          >
+            GitHub
+          </a>,
+          <a
+            href="https://github.com/minhvdq/CSCI435-Rice-Leaf-Disease-Classification/tree/damian"
+            target="_blank"
+          >
+            Live
+          </a>
+          .
+        </li>
+        <li>
+          <b>What:</b> A multi-tenant SaaS platform for automated email compliance monitoring, enabling SMBs to detect and quarantine policy-violating outbound emails before delivery — without
+          requiring MX record changes or IT infrastructure.
+        </li>
+        <li>
+          <b>How:</b>{"  "}
+          Built a Go microservices architecture with RabbitMQ async processing, integrating Mistral AI (mistral-small-latest) for agentic compliance analysis and mistral-embed for
+          1024-dim semantic embeddings stored in pgvector. Implemented RAG-augmented policy enforcement, Gmail Push Notifications via Google Pub/Sub for real-time inbox scanning,
+          role-scoped audit logs, per-tenant plan enforcement (Free/Starter/Pro/Business), and Stripe billing — deployed on Docker with a React frontend.
+        </li>
+      </ul>
+    ),
+  },
+  {
     id: "rice-leaf-dsease-classification",
     navLabel: "Rice Leaf Disease Classification",
     title: "Rice Leaf Disease Classification",
@@ -209,39 +248,6 @@ const PROJECTS = [
           <b>What:</b> A UMBCHack 2024 project developed by a team of 4. It
           connects natural disaster victims with resource suppliers by matching
           seekers with the nearest available resources within a 100km radius.
-        </li>
-      </ul>
-    ),
-  },
-  {
-    id: "project-mail-chat",
-    navLabel: "Mail Chat",
-    title: "Mail Chat",
-    images: [],
-    children: (
-      <ul>
-        <li>
-          <b>When:</b> June 2024 - July 2024.
-        </li>
-        <li>
-          <b>Where:</b>{" "}
-          <a
-            href="https://github.com/minhvdq/go-micro-mail-exchange"
-            target="_blank"
-          >
-            GitHub
-          </a>
-          .
-        </li>
-        <li>
-          <b>What:</b> A highly scalable, multi-microservice application built
-          with Go that enables users to chat in an email-like system.
-        </li>
-        <li>
-          <b>How:</b> Comprises five microservices (Broker, Auth, Listener,
-          Logging, Mail) communicating via RabbitMQ. The entire application is
-          containerized with Docker and orchestrated with Kubernetes for
-          scalability.
         </li>
       </ul>
     ),

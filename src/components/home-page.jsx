@@ -88,15 +88,6 @@ export default function HomePage() {
             </button>
             <button
               type="button"
-              className="btn btn-color-1 btn-fiverr"
-              onClick={() =>
-                window.open("https://www.fiverr.com/s/99rX3Kd", "_blank")
-              }
-            >
-              My Fiverr Gig
-            </button>
-            <button
-              type="button"
               className="btn btn-color-1"
               onClick={() => {
                 window.location.hash = "#contact";
