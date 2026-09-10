@@ -25,10 +25,10 @@ const PROJECTS = [
         <li>
           <b>Where:</b>{" "}
           <a
-            href="https://quarantio.app/"
+            href="https://github.com/minhvdq/Quarantio"
             target="_blank"
           >
-            quarantio.app
+            Github
           </a>
           .
         </li>
@@ -58,7 +58,7 @@ const PROJECTS = [
         <li>
           <b>Where:</b>{" "}
           <a
-            href="https://github.com/minhvdq/CSCI435-Rice-Leaf-Disease-Classification/tree/damian"
+            href="https://github.com/minhvdq/CSCI435-Rice-Leaf-Disease-Classification"
             target="_blank"
           >
             GitHub
